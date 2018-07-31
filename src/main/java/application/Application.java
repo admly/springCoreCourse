@@ -12,6 +12,8 @@ public class Application {
         Car car = (Car) context.getBean("car");
         car.getTires().tiresInfo();
 
+        ApplicationContext xmlContext =
+                new ClassPathXmlApplicationContext("application/configuration/xmlConfig.xml");
 
 
     }

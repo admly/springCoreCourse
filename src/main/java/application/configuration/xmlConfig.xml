@@ -8,11 +8,9 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd"
 >
+    <context:component-scan base-package="application" />
 
-    <bean id="seats" class="application.beans.Seats"/>
+    <bean id="seats" class="application.beans.Seats" autowire="byName"/>
 
-    <bean id="plane" class="application.beans.Plane">
-        <constructor-arg name="seats" ref="seats"/>
-    </bean>
-
+    <bean id="plane" class="application.beans.Plane"  autowire="byName"/>
 </beans>

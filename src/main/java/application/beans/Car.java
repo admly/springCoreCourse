@@ -8,10 +8,22 @@ import org.springframework.stereotype.Component;
 public class Car {
     private static final Logger log = Logger.getLogger(Car.class.getName());
     private Engine engine;
+    private Tires tires;
 
     @Autowired
     public Car(Engine engine){
         this.engine = engine;
         log.info("Car constructor");
     }
+
+    public Tires getTires() {
+        return tires;
+    }
+
+    @Autowired
+    public void setTires(Tires tires) {
+        this.tires = tires;
+    }
+
+
 }
